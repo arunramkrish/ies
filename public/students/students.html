@@ -1,0 +1,29 @@
+<div id="listContent" >
+    <h1>Student Information System</h1>
+    <table>
+        <th>
+            <td>Student Name</td>
+            <td>Roll No</td>
+            <td>Programme</td>
+            <td>Semester</td>
+        </th>
+        <tr ng-repeat="student in studentProfiles">
+            <td>{{student.name}}</td>
+            <td>{{student.rollNo}}</td>
+            <td>{{student.programme}}</td>
+            <td>{{student.semester}}</td>
+        </tr>
+    </table>
+    <div ng-show="listMode" id="grid1" ui-grid="{ data: studentProfiles }" class="grid"></div>
+    <button ng-click="add()" value="Add">Add</button>
+
+    <div ng-show="!listMode">
+        <h2 style="position: relative;left: 350px;top:2px">Personal Details</h2>
+        <div><span>Name</span><input type="text" ng-model="studentProfile.name"/></div>
+        <div><span>RollNo</span><input type="text" ng-model="studentProfile.rollNo"/></div>
+        <div><span>Programme</span><input type="text" ng-model="studentProfile.programme"/></div>
+        <div><span>Semester</span><input type="text" ng-model="studentProfile.semester"/></div>
+    </div>
+    <button ng-show="!listMode" ng-click="save()" value="Save">Save</button>
+
+</div>
