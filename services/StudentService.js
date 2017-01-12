@@ -1,4 +1,5 @@
-var studentDao = require('../daos/StudentDao');
+//var studentDao = require('../daos/StudentDao');
+var studentDao = require('../daos/StudentDocumentDao');
 
 module.exports.createStudent = function(student, callback) {
     studentDao.create(student, callback);
