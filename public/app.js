@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.version',
   'ies.14mx47',
-  'ies.students'
+  'ies.students',
+  'myApp.rollno'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
