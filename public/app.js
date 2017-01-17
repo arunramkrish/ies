@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.version',
+  'ies.14mx47',
   'ies.students'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

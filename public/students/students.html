@@ -3,13 +3,23 @@
     
     <div ng-show="listMode" id="grid1" ui-grid="{ data: studentProfiles }" class="grid"></div>
     <button ng-click="add()" value="Add">Add</button>
+    <button ng-show="listMode" ng-click="get()" value="Save">view</button>
+
 
     <div ng-show="!listMode">
         <h2 style="position: relative;left: 350px;top:2px">Personal Details</h2>
-        <div><span>Name</span><input type="text" ng-model="studentProfile.name"/></div>
-        <div><span>RollNo</span><input type="text" ng-model="studentProfile.rollNo"/></div>
-        <div><span>Programme</span><input type="text" ng-model="studentProfile.programme"/></div>
-        <div><span>Semester</span><input type="text" ng-model="studentProfile.semester"/></div>
+        <label>Name:</label>
+    <input class="w3-input w3-border" type="text" ng-model="studentProfile.name"  placeholder="Name">
+  <br>
+    <label>RollNo:</label>
+    <input class="w3-input w3-border" type="text" ng-model="studentProfile.rollNo" placeholder="RollNo">
+  <br>
+    <label>Programme:</label>
+    <input class="w3-input w3-border" type="text" ng-model="studentProfile.programme" placeholder="Programe">
+  <br>
+  <label>Semester:</label>
+    <input class="w3-input w3-border" type="text" ng-model="studentProfile.semester" placeholder="Semester">
+  <br>
     </div>
     <button ng-show="!listMode" ng-click="save()" value="Save">Save</button>
 

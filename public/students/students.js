@@ -16,6 +16,10 @@ angular.module("ies.students", ["ngRoute"])
         s.listMode = false;
         s.studentProfile = {};
     };
+     s.get = function() {
+        s.listMode = True;
+        s.studentProfile = {};
+    };
 
     s.save = function() {
         svc.create(s.studentProfile, function(response) {
