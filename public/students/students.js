@@ -8,7 +8,7 @@ angular.module("ies.students", ["ngRoute"])
 
 .controller('StudentsCtrl', ['$scope', '$rootScope', 'StudentService', function(s, root, svc) {
     s.listMode = true;
-    s.studentProfiles=[{name:'Sheik', rollNo:'007', programme: root.msg, semester: 8},{name:'Sheikabdullah', rollNo:'007', programme: root.msg},{name:'Sheik', rollNo:'007', programme: root.msg},{name:'Sheik', rollNo:'007', programme: root.msg}];
+    s.studentProfiles=[{name:'Thirus', rollNo:'14mx47', programme: 'MCA', semester: 6},{name:'Shanz', rollNo:'14mx35', programme: 'MCA', semester: 6},{name:'Basha', rollNo:'14mx58', programme: 'MCA', semester: 6}];
 
     s.studentProfile = {};
 

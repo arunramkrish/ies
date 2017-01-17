@@ -1,19 +1,6 @@
 <div id="listContent" >
-    <h1>Student Information System</h1>
-    <table>
-        <th>
-            <td>Student Name</td>
-            <td>Roll No</td>
-            <td>Programme</td>
-            <td>Semester</td>
-        </th>
-        <tr ng-repeat="student in studentProfiles">
-            <td>{{student.name}}</td>
-            <td>{{student.rollNo}}</td>
-            <td>{{student.programme}}</td>
-            <td>{{student.semester}}</td>
-        </tr>
-    </table>
+    <h1 style="color:blue;"><center><b>Student Information System</b></h1>
+    
     <div ng-show="listMode" id="grid1" ui-grid="{ data: studentProfiles }" class="grid"></div>
     <button ng-click="add()" value="Add">Add</button>
 
