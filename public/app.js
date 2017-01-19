@@ -9,9 +9,15 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.version',
+<<<<<<< HEAD
   'ies.students',
   'inputBasicDemo'
   
+=======
+  'ies.14mx47',
+  'ies.students',
+  'myApp.rollno'
+>>>>>>> d65f0598279966827b08bf9e7e3a78e4ae94dbef
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
