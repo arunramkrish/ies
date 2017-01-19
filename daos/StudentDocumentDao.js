@@ -23,14 +23,15 @@ module.exports.find = function (id, callback) {
 module.exports.get = function (callback) {
     //connect to mongodb to get db handle
     mongodb.connect(function (err, db) {
-        console.log("Connection with mongodb successful");
+        console.log("Connection with mongodb retrive");
 
         //using db handle, get students collection
         var studentsCollection = db.collection('students');
 
         //insert student record and pass the result to callback with inserted record as second argument
         studentsCollection.find({}).toArray(function(err, result) {
-            callback(err, result);
+            callback(result);
+            console.log("14mx47 retrive");
         });
     });
 };

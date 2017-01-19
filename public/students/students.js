@@ -11,7 +11,13 @@ angular.module("ies.students", ["ngRoute"])
     s.studentProfiles=[{name:'Thirus', rollNo:'14mx47', programme: 'MCA', semester: 6},{name:'Shanz', rollNo:'14mx35', programme: 'MCA', semester: 6},{name:'Basha', rollNo:'14mx58', programme: 'MCA', semester: 6}];
 
     s.studentProfile = {};
-
+    svc.get(function(students) {
+        if (students) {
+            students.forEach(function(e) {
+                s.studentProfile.push(e);
+            });
+        }
+    });
     s.add = function() {
         s.listMode = false;
         s.studentProfile = {};
@@ -41,4 +47,17 @@ angular.module("ies.students", ["ngRoute"])
             console.log('error in posting students');
         });
     };
+    this.get=function(callback){
+    var request= {
+        url: 'students',
+        //data: JSON.stringify(student),
+        method: 'GET',
+        headers: {'Accept': 'application/json'}
+};
+$http(request).then(function(response) {
+    callback(response.data);
+},function(){
+    Console.log('error');
+});
+};
 }]);
